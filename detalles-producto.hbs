@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {{>head}}
+  </head>
+  <body>
+    {{>nav}}
+	<h1>Detalles del producto</h1>
+
+
+<div class="productos">
+{{#each productos}}
+{{#if hayStock}}
+<p> el producto{{id}}  y el precio {{precio}} </p>
+
+
+{{else}}
+<p> el producto {{id}} no hay stock la cantidad es {{cantidad}}</p>
+{{/if}}
+{{/each}}
+
+
+</div>
+	
+	
+	
+	
+	
+	{{>footer}}
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
